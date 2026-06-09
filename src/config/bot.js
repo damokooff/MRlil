@@ -40,7 +40,7 @@ export const botConfig = {
     
     // Interval between status changes (in milliseconds)
     // 10000 = 10 seconds (for testing), 300000 = 5 minutes (for production)
-    interval: 300000, // 5 minutes
+    interval: 10000, // 10 sec
     
     // List of statuses to rotate through
     statuses: [
