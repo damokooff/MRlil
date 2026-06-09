@@ -380,20 +380,7 @@ try {
   process.exit(1);
 }
 
-// À ajouter dans votre événement 'ready'
-if (botConfig.statusLoop.enabled) {
-  let currentIndex = 0;
-  
-  const rotateStatus = () => {
-    const status = botConfig.statusLoop.statuses[currentIndex];
-    client.user.setActivity(status.name, { type: status.type });
-    if (status.status) client.user.setStatus(status.status);
-    currentIndex = (currentIndex + 1) % botConfig.statusLoop.statuses.length;
-  };
-  
-  rotateStatus();
-  setInterval(rotateStatus, botConfig.statusLoop.interval);
-}
+
 export default TitanBot;
 
 
