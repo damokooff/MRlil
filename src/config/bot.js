@@ -31,7 +31,33 @@ export const botConfig = {
       },
     ],
   },
-
+  // =========================
+  // STATUS LOOP (rotates between different statuses)
+  // =========================
+  statusLoop: {
+    // Enable/disable the status rotation
+    enabled: true,
+    
+    // Interval between status changes (in milliseconds)
+    // 10000 = 10 seconds (for testing), 300000 = 5 minutes (for production)
+    interval: 300000, // 5 minutes
+    
+    // List of statuses to rotate through
+    statuses: [
+      { name: "/help | Mr.lil", type: 3, status: "online" },           // Watching
+      { name: "sur un nénuphar 🐸", type: 0, status: "online" },       // Playing
+      { name: "coasser dans la mare", type: 0, status: "online" },     // Playing
+      { name: "une petite grenouille", type: 0, status: "online" },    // Playing
+      { name: "tes commandes", type: 2, status: "online" },            // Listening
+      { name: "de la musique grenouille 🎵", type: 2, status: "online" }, // Listening
+      { name: "la vie d'étang 🐸", type: 0, status: "online" },        // Playing
+      { name: "plouf plouf", type: 0, status: "idle" },                // Playing
+      { name: "aux grenouilles", type: 2, status: "online" },          // Listening
+      { name: "les libellules", type: 3, status: "online" },           // Watching
+      { name: "lily pad simulator", type: 0, status: "dnd" },          // Playing
+    ]
+  },
+  
   // =========================
   // COMMAND BEHAVIOR
   // =========================
